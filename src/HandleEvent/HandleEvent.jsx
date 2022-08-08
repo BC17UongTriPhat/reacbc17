@@ -29,14 +29,14 @@ export default class HandleEvent extends Component {
         <hr />
         <h3>Handle event param loại 2</h3>
         {/* cách này chưa nhấn là nó đã thực thi lệnh onClick */}
-        <button onClick={this.showMess("Minh")}>Show mess</button>
+        <button onClick={this.showMess("Minh")}>Show mess1</button>
         <p>      trong jS co hàm gọi lại chính bản than nó và trả về nó lúc chưa gọi
         Trong js có cái hàm thay vì return về giá trị thì cái hàm đó cho return
         về 1 cái hàm chưa được gọi call back funciton </p>
   {/* trong js 1 phương thức là bind và truyền vào 1 tham số là this( this chính là function do là hàm showMess 
   và Hàm showMess là hàm chưa gọi và ta muốn truyền và tham số tiếp theo là số 2 trở đi sau dấu phẩy 
     sau ) */}
-        <button onClick={this.showMess.bind(this, "Tài")}>Show mess</button>
+        <button onClick={this.showMess.bind(this, "Tài")}>Show mess2</button>
         {/* cách trong react 
         Click vào nó sẽ thực hiện hàm bên trong hàm arrow và ta truyền vào đó 1 cái hàm có kèm tham số thì nó sẽ gọi hàm đó chạy
         arrow làm gì bên trong ? ( những hàm gì bên trong nó sẽ thực thi) */}
@@ -45,7 +45,7 @@ export default class HandleEvent extends Component {
             this.showMess("Dũng đẹp trai!");
           }}
         >
-          show mess param
+          show mess param3
         </button>
       </div>
     );
