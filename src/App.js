@@ -14,6 +14,7 @@ import ShoesShop from './Props/ShoesShop/ShoesShop';
 import DemoProps1 from './Props/DemoProps1/DemoProps1';
 import Props1 from './Props/Props1/Props1';
 import ShoesShop1 from './Props/ShoesShop1/ShoesShop1';
+import XemChiTietSanPham from './Props/XemChiTietSanPham/XemChiTietSanPham';
 
 
 function App() {
@@ -31,7 +32,8 @@ function App() {
       {/* <DemoProps1 /> */}
       {/* <Props1/> */}
       {/* <ShoesShop /> */}
-      <ShoesShop1/>
+      {/* <ShoesShop1/> */}
+      <XemChiTietSanPham/>
 
 
 
