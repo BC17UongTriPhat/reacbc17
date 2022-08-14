@@ -3,7 +3,7 @@ import React, { Component } from 'react'
 export default class GioHang extends Component {
     render() {
         // lấy prop từ cha sang con đặt ở đây video4 1:55
-        let {gioHang}= this.props;
+        let { gioHang } = this.props;
 
         return (
 
@@ -23,7 +23,7 @@ export default class GioHang extends Component {
                                 </button>
                             </div>
                             <div className="modal-body">
-                               <table className='table'>
+                                <table className='table'>
                                     <thead>
                                         <tr>
                                             <th>Mã Sản Phẩm</th>
@@ -34,23 +34,36 @@ export default class GioHang extends Component {
                                             <th>Thành Tiền</th>
                                             <th></th>
                                         </tr>
-                                    </thead> 
+                                    </thead>
                                     <tbody>
                                         {/* render ra dưới đây = hàm map 1:56*/}
-                                        {gioHang.map((spGH,index)=>{
-                                            return     <tr key={index}>
-                                            <td className='text-center'>{spGH.maSP}</td>
-                                            <td className='text-center'><img src={spGH.hinhAnh} style={{height:50}} alt="" /></td>
-                                            <td className='text-center'>{spGH.tenSP}</td>
-                                            <td className='text-center'>{spGH.soLuong}</td>
-                                            <td className='text-center'>{spGH.giaBan}</td>
-                                            <td className='text-center'>{spGH.giaBan * spGH.soLuong}</td>
-                                            <td>
-                                                <button className='btn btn-danger'>Xóa</button>
-                                            </td>
-                                     
-                                
-                                        </tr>
+                                        {gioHang.map((spGH, index) => {
+                                            return <tr key={index}>
+                                                <td className='text-center'>{spGH.maSP}</td>
+                                                <td className='text-center'><img src={spGH.hinhAnh} style={{ height: 50 }} alt="" /></td>
+                                                <td className='text-center'>{spGH.tenSP}</td>
+                                                <td className='text-center'>
+                                                    <button className='btn btn-primary'onClick={() => {
+                                                        this.props.tangGiamSoLuong(spGH.maSP,1);
+                                                    }} > + </button>
+
+                                                    {spGH.soLuong}
+                                                    <button className='btn btn-primary ml-1' onClick={() => {
+                                                        this.props.tangGiamSoLuong(spGH.maSP,-1);
+                                                    }}> - </button>
+
+                                                </td>
+                                                <td className='text-center'>{spGH.giaBan}</td>
+
+                                                <td className='text-center'>{spGH.giaBan * spGH.soLuong}</td>
+                                                <td>
+                                                    <button className='btn btn-danger' onClick={() => {
+                                                        this.props.xoaSanPham(spGH.maSP);
+                                                    }}>Xóa</button>
+                                                </td>
+
+
+                                            </tr>
                                         })}
                                         {/* <tr>
                                             <td className='text-center'>1</td>
@@ -65,7 +78,7 @@ export default class GioHang extends Component {
                                      
                                 
                                         </tr> */}
-                                    
+
                                     </tbody>
                                 </table>
                             </div>

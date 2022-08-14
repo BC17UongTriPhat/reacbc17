@@ -15,6 +15,7 @@ import DemoProps1 from './Props/DemoProps1/DemoProps1';
 import Props1 from './Props/Props1/Props1';
 import ShoesShop1 from './Props/ShoesShop1/ShoesShop1';
 import XemChiTietSanPham from './Props/XemChiTietSanPham/XemChiTietSanPham';
+import DemoGioHangRedux from './Redux/GioHangRedux/DemoGioHangRedux';
 
 
 function App() {
@@ -33,7 +34,8 @@ function App() {
       {/* <Props1/> */}
       {/* <ShoesShop /> */}
       {/* <ShoesShop1/> */}
-      <XemChiTietSanPham/>
+      {/* <XemChiTietSanPham/> */}
+      <DemoGioHangRedux/>
 
 
 
